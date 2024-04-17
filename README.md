@@ -1,3 +1,13 @@
+# 1. Cài đặt thư viện cần thiết 
+```cmd
+
+pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
+
+pip install -r requirements.txt
+```
+
+# 2. Chuyển đổi file âm thanh thành văn bản
+
 Chúng tôi cung cấp một tập lệnh dự đoán có thể chuyển đổi một tệp âm thanh cụ thể hoặc thậm chí là một danh sách các tệp âm thanh. Hãy xem xét các đối số dưới đây, đặc biệt là đối số ```-f TEST_FILEPATH``` và đối số ```-s HUGGINGFACE_FOLDER```:
 ```cmd
 sử dụng: inference.py [-h] -f TEST_FILEPATH [-s HUGGINGFACE_FOLDER] [-d DEVICE_ID]
@@ -14,7 +24,7 @@ tuỳ chọn đối số:
   -d DEVICE_ID, --device_id DEVICE_ID
                         Thiết bị bạn muốn kiểm tra mô hình của mình trên nếu CUDA có sẵn. Nếu không, sử dụng CPU. Giá trị mặc định: 0
 ```
-# Chuyển văn bản từ một tệp âm thanh(Pinyin mode):
+## 2.1. Chuyển văn bản từ một tệp âm thanh(Pinyin mode):
 ```cmd
 python inference.py \
     -f path/to/your/audio/file.wav(.mp3) \
@@ -23,15 +33,14 @@ python inference.py \
 # output example:
 >>> transcript: nà shì kāi shuō kǒu lìng
 ```
-# Chuyển văn bản từ một tệp âm thanh(Hanzi mode):
+## 2.2. Chuyển văn bản từ một tệp âm thanh(Hanzi mode):
 ```cmd
 python inference.py \
     -f path/to/your/audio/file.wav(.mp3) \
     -s DuyTa/ZH_Hanzi
 ```
 
-
-# Chuyển văn bản từ một tệp các file âm thanh :
+## 2.3. Chuyển văn bản từ một tệp các file âm thanh :
 ```cmd
 python inference.py \
     -f path/to/your/new.txt \
