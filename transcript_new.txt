@@ -1,0 +1,3 @@
+samples/2.wav nǐ zán men xué xiào shì bú shì hái yǒu yí gè zōng jiào xìng yǎng nà nà nǐ shè tuán le
+samples/3.wav shì
+samples/4.wav dāng shí tè bié jǐng zhǎng jiù pā shì yī xiē xié mén wài de méi yǒu méi yǒu gǎn shuō
